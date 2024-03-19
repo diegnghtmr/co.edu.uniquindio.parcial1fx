@@ -1,0 +1,4 @@
+4.1 a)
+1. Principio de abierto/cerrado: La clase EmpresaTransporteController esta abierta para la extensión (puedes agregar más métodos si es necesario) pero cerrada para la modificación (no necesitas cambiar el código existente para agregar nueva funcionalidad).
+2. Principio de inversión de dependencias: Este principio se aplica a través del uso de ModelFactory. En lugar de depender de implementaciones concretas, las clases dependen de la abstraccio.
+3. Principio de responsabilidad única: Cada clase en el código tiene una responsabilidad única al momento de ser creada gracias a los Builders (EmpresaTransporteBuilder, PropietarioBuilder, UsuarioBuilder, VehiculoBuilder, VehiculoCargaBuilder y VehiculoTransporteBuilder).
