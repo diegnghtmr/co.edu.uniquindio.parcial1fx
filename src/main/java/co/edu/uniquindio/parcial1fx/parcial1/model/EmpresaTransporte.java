@@ -89,33 +89,24 @@ public class EmpresaTransporte {
     }
 
     private Propietario getBuildPropietario(String nombre, String cedula,
-                                        String email, String celular,
-                                        Vehiculo vehiculoPrincipal,
-                                        Collection<Vehiculo> listaVehiculosAsociados,
-                                            int edad) {
+                                        String email, String celular, int edad) {
         return new PropietarioBuilder()
                 .setNombre(nombre)
                 .setCedula(cedula)
                 .setEmail(email)
                 .setCelular(celular)
-                .setVehiculoPrincipal(vehiculoPrincipal)
-                .setListaVehiculosAsociados(listaVehiculosAsociados)
                 .setEdad(edad)
                 .setOwnByEmpresaTransporte(this)
                 .build();
     }
 
     public boolean crearPropetario(String nombre, String cedula,
-                                String email, String celular,
-                                Vehiculo vehiculoPrincipal,
-                                Collection<Vehiculo> listaVehiculosAsociados,
-                                   int edad) {
+                                String email, String celular, int edad) {
         Propietario propietarioEncontrado = obtenerPropietario(cedula);
 
         if (propietarioEncontrado == null) {
             Propietario propietario = getBuildPropietario(nombre, cedula,
-                    email, celular,  vehiculoPrincipal, listaVehiculosAsociados,
-                    edad);
+                    email, celular, edad);
             agregarPropietario(propietario);
             return true;
         }
@@ -133,26 +124,22 @@ public class EmpresaTransporte {
     }
 
     private Usuario getBuildUsuario(String nombre, String ID, int edad,
-                                    VehiculoTransporte vehiculoTransporteAsociado,
                                     double peso) {
         return new UsuarioBuilder()
                 .setNombre(nombre)
                 .setID(ID)
                 .setEdad(edad)
-                .setVehiculoTransporteAsociado(vehiculoTransporteAsociado)
                 .setPeso(peso)
                 .setOwnByEmpresaTransporte(this)
                 .build();
     }
 
     public boolean crearUsuario(String nombre, String ID, int edad,
-                                VehiculoTransporte vehiculoTransporteAsociado,
                                 double peso) {
         Usuario usuarioEncontrado = obtenerUsuario(ID);
 
         if (usuarioEncontrado == null) {
-            Usuario usuario = getBuildUsuario(nombre, ID, edad,
-                    vehiculoTransporteAsociado, peso);
+            Usuario usuario = getBuildUsuario(nombre, ID, edad, peso);
             agregarUsuario(usuario);
             return true;
         }
@@ -171,8 +158,6 @@ public class EmpresaTransporte {
 
     private VehiculoCarga getBuildVehiculoCarga(String placa, String modelo,
                                           String marca, String color,
-                                          Propietario propietarioAsociado,
-                                          Collection<Propietario> listaPropietariosAsociados,
                                           double capacidadCarga, int numeroEjes,
                                                 String numeroChasis) {
         return new VehiculoCargaBuilder()
@@ -180,8 +165,6 @@ public class EmpresaTransporte {
                 .setModelo(modelo)
                 .setMarca(marca)
                 .setColor(color)
-                .setPropietarioAsociado(propietarioAsociado)
-                .setListaPropietariosAsociados(listaPropietariosAsociados)
                 .setCapacidadCarga(capacidadCarga)
                 .setNumeroEjes(numeroEjes)
                 .setNumeroChasis(numeroChasis)
@@ -191,17 +174,13 @@ public class EmpresaTransporte {
 
     public boolean crearVehiculoCarga(String placa, String modelo,
                                       String marca, String color,
-                                      Propietario propietarioAsociado,
-                                      Collection<Propietario> listaPropietariosAsociados,
                                       double capacidadCarga, int numeroEjes,
                                       String numeroChasis) {
         VehiculoCarga vehiculoCargaEncontrado = obtenerVehiculoCarga(placa);
 
         if (vehiculoCargaEncontrado == null) {
             VehiculoCarga vehiculoCarga = getBuildVehiculoCarga(placa, modelo,
-                    marca, color,propietarioAsociado,
-                    listaPropietariosAsociados,
-                    capacidadCarga, numeroEjes, numeroChasis);
+                    marca, color, capacidadCarga, numeroEjes, numeroChasis);
             agregarVehiculoCarga(vehiculoCarga);
             return true;
         }
@@ -220,19 +199,13 @@ public class EmpresaTransporte {
 
     private VehiculoTransporte getBuildVehiculoTransporte
             (String placa, String modelo, String marca, String color,
-             Propietario propietarioAsociado,
-             Collection<Propietario> listaPropietariosAsociados,
-             int numeroMaxPasajeros,
-             Collection<Usuario> listaUsuariosAsociados, String numeroChasis) {
+             int numeroMaxPasajeros, String numeroChasis) {
         return new VehiculoTransporteBuilder()
                 .setPlaca(placa)
                 .setModelo(modelo)
                 .setMarca(marca)
                 .setColor(color)
-                .setPropietarioAsociado(propietarioAsociado)
-                .setListaPropietariosAsociados(listaPropietariosAsociados)
                 .setNumeroMaxPasajeros(numeroMaxPasajeros)
-                .setListaUsuariosAsociados(listaUsuariosAsociados)
                 .setNumeroChasis(numeroChasis)
                 .setOwnByEmpresaTransporte(this)
                 .build();
@@ -241,17 +214,12 @@ public class EmpresaTransporte {
 
     public boolean crearVehiculoTransporte(String placa, String modelo,
                                            String marca, String color,
-                                           Propietario propietarioAsociado,
-                                           Collection<Propietario> listaPropietariosAsociados,
                                            int numeroMaxPasajeros,
-                                           Collection<Usuario> listaUsuariosAsociados,
                                            String numeroChasis) {
         VehiculoTransporte vehiculoTransporteEncontrado = obtenerVehiculoTransporte(placa);
         if (vehiculoTransporteEncontrado == null) {
             VehiculoTransporte vehiculoTransporte = getBuildVehiculoTransporte(placa,
-                    modelo, marca, color, propietarioAsociado,
-                    listaPropietariosAsociados, numeroMaxPasajeros,
-                    listaUsuariosAsociados, numeroChasis);
+                    modelo, marca, color, numeroMaxPasajeros, numeroChasis);
             agregarVehiculoTransporte(vehiculoTransporte);
             return true;
         }

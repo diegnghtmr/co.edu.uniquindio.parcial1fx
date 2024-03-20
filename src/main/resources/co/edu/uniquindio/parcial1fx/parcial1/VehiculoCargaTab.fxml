@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.parcial1fx.parcial1.viewController.VehiculoCargaViewController"
+            prefHeight="537.0" prefWidth="602.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <children>
+            <SplitPane dividerPositions="0.4980237154150198" orientation="VERTICAL" prefHeight="508.0" prefWidth="602.0">
+                <items>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                        <children>
+                            <Label layoutX="150.0" layoutY="9.0" text="Informacion del Vehiculo Carga" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                <font>
+                                    <Font name="Arial Bold Italic" size="20.0" />
+                                </font>
+                            </Label>
+                            <Separator layoutY="40.0" prefHeight="1.0" prefWidth="602.0" />
+                            <Label layoutX="26.0" layoutY="52.0" text="Placa:" />
+                            <TextField fx:id="txtPlacaVehiculoCarga" layoutX="85.0" layoutY="48.0" prefHeight="25.0" prefWidth="197.0" promptText="Ingrese la placa" />
+                            <Button fx:id="btnAgregarVehiculoCarga" layoutX="229.0" layoutY="215.0" mnemonicParsing="false" onAction="#onAgregarVehiculoCarga" text="Agregar Vehiculo Carga" />
+                            <Separator layoutY="205.0" prefHeight="1.0" prefWidth="602.0" />
+                            <Label layoutX="26.0" layoutY="95.0" text="Marca:" />
+                            <Label layoutX="26.0" layoutY="136.0" text="Capacidad Carga:" />
+                            <Label layoutX="348.0" layoutY="52.0" text="Modelo:" />
+                            <Label layoutX="348.0" layoutY="95.0" text="Color:" />
+                            <Label layoutX="348.0" layoutY="136.0" text="Numero Ejes:" />
+                            <TextField fx:id="txtMarcaVehiculoCarga" layoutX="85.0" layoutY="91.0" prefHeight="25.0" prefWidth="197.0" promptText="Ingrese la marca" />
+                            <TextField fx:id="txtCapacidadCargaVehiculoCarga" layoutX="126.0" layoutY="132.0" prefHeight="25.0" prefWidth="156.0" promptText="Ingrese la capacidad carga" />
+                            <TextField fx:id="txtModeloVehiculoCarga" layoutX="410.0" layoutY="48.0" prefHeight="25.0" prefWidth="166.0" promptText="Ingrese el modelo" />
+                            <TextField fx:id="txtColorVehiculoCarga" layoutX="410.0" layoutY="91.0" prefHeight="25.0" prefWidth="166.0" promptText="Ingrese el color" />
+                            <TextField fx:id="txtNumeroEjesVehiculoCarga" layoutX="428.0" layoutY="132.0" prefHeight="25.0" prefWidth="148.0" promptText="Ingrese el numero ejes" />
+                            <Label layoutX="26.0" layoutY="176.0" text="Numero Chassis:" />
+                            <TextField fx:id="txtNumeroChassisVehiculoCarga" layoutX="126.0" layoutY="172.0" prefHeight="25.0" prefWidth="156.0" promptText="Ingrese el numero chassis" />
+                            <Button fx:id="btnCrearVehiculoCarga" layoutX="43.0" layoutY="215.0" mnemonicParsing="false" onAction="#onCrearVehiculoCarga" text="Crear Vehiculo Carga" />
+                            <Button fx:id="btnEditarVehiculoCarga" layoutX="428.0" layoutY="215.0" mnemonicParsing="false" onAction="#onEditarVehiculoCarga" text="Editar Vehiculo Carga" />
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                        <children>
+                            <TableView layoutX="-1.0" prefHeight="200.0" prefWidth="602.0">
+                                <columns>
+                                    <TableColumn prefWidth="75.0" text="Placa" />
+                                    <TableColumn prefWidth="75.0" text="Modelo" />
+                                    <TableColumn prefWidth="75.0" text="Marca" />
+                                    <TableColumn prefWidth="75.0" text="Color" />
+                                    <TableColumn prefWidth="100.0" text="Capacidad Carga" />
+                                    <TableColumn prefWidth="100.0" text="Numero Ejes" />
+                                    <TableColumn prefWidth="101.0" text="Numero Chassis" />
+                                </columns>
+                            </TableView>
+                            <Button fx:id="btnEliminarVehiculoCarga" layoutX="229.0" layoutY="212.0" mnemonicParsing="false" onAction="#onEliminarVehiculoCarga" text="Eliminar Vehiculo Carga" />
+                        </children>
+                    </AnchorPane>
+                </items>
+            </SplitPane>
+        </children></AnchorPane>
+
+</AnchorPane>

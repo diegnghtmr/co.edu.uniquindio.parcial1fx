@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.parcial1fx.parcial1.viewController.PropietarioViewController"
+            prefHeight="537.0" prefWidth="602.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <children>
+            <SplitPane dividerPositions="0.4970414201183432" orientation="VERTICAL" prefHeight="509.0" prefWidth="602.0">
+                <items>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="600.0">
+                        <children>
+                            <Label layoutX="170.0" layoutY="9.0" text="Informacion del Propietario" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                <font>
+                                    <Font name="Arial Bold Italic" size="20.0" />
+                                </font>
+                            </Label>
+                            <Separator layoutY="40.0" prefHeight="1.0" prefWidth="602.0" />
+                            <Label layoutX="29.0" layoutY="66.0" text="Nombre:" />
+                            <Label layoutX="29.0" layoutY="108.0" text="Email:" />
+                            <Label layoutX="330.0" layoutY="66.0" text="Cedula:" />
+                            <Label layoutX="330.0" layoutY="108.0" text="Celular:" />
+                            <TextField fx:id="txtCedulaPropietario" layoutX="378.0" layoutY="62.0" prefHeight="25.0" prefWidth="166.0" promptText="Ingrese la cedula" />
+                            <TextField fx:id="txtNombrePropietario" layoutX="85.0" layoutY="62.0" prefHeight="25.0" prefWidth="166.0" promptText="Ingrese el nombre" />
+                            <TextField fx:id="txtCelularPropietario" layoutX="378.0" layoutY="104.0" prefHeight="25.0" prefWidth="166.0" promptText="Ingrese el celular" />
+                            <TextField fx:id="txtEmailPropietario" layoutX="85.0" layoutY="104.0" prefHeight="25.0" prefWidth="166.0" promptText="Ingrese el email" />
+                            <Separator layoutY="205.0" prefHeight="1.0" prefWidth="602.0" />
+                            <Button fx:id="btnAgregarPropietario" layoutX="241.0" layoutY="215.0" mnemonicParsing="false" onAction="#onAgregarPropietario" text="Agregar Propietario" />
+                            <Label layoutX="29.0" layoutY="149.0" text="Edad:" />
+                            <TextField fx:id="txtEdadPropietario" layoutX="85.0" layoutY="145.0" prefHeight="25.0" prefWidth="166.0" promptText="Ingrese la edad" />
+                            <Button fx:id="btnCrearPropietario" layoutX="45.0" layoutY="215.0" mnemonicParsing="false" onAction="#onCrearPropietario" text="Crear Propietario" />
+                            <Button fx:id="btnEditarPropietario" layoutX="435.0" layoutY="215.0" mnemonicParsing="false" onAction="#onEditarPropietario" text="Editar Propietario" />
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="540.0">
+                        <children>
+                            <TableView layoutX="-1.0" prefHeight="200.0" prefWidth="602.0">
+                                <columns>
+                                    <TableColumn prefWidth="150.0" text="Nombre" />
+                                    <TableColumn prefWidth="100.0" text="Cedula" />
+                                    <TableColumn prefWidth="180.0" text="Email" />
+                                    <TableColumn prefWidth="100.0" text="Celular" />
+                                    <TableColumn prefWidth="75.0" text="Edad" />
+                                </columns>
+                            </TableView>
+                            <Button fx:id="btnEliminarPropietario" layoutX="241.0" layoutY="212.0" mnemonicParsing="false" onAction="#onEliminarPropietario" text="Eliminar Propietario" />
+                        </children>
+                    </AnchorPane>
+                </items>
+            </SplitPane>
+        </children></AnchorPane>
+</AnchorPane>
