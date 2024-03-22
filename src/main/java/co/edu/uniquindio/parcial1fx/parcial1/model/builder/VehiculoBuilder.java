@@ -4,8 +4,10 @@ import co.edu.uniquindio.parcial1fx.parcial1.model.EmpresaTransporte;
 import co.edu.uniquindio.parcial1fx.parcial1.model.Propietario;
 import co.edu.uniquindio.parcial1fx.parcial1.model.Vehiculo;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 public abstract class VehiculoBuilder<B extends VehiculoBuilder<B, V>, V extends Vehiculo> {
     protected String placa;
@@ -13,7 +15,7 @@ public abstract class VehiculoBuilder<B extends VehiculoBuilder<B, V>, V extends
     protected String marca;
     protected String color;
     protected Propietario propietarioAsociado;
-    protected Collection<Propietario> listaPropietariosAsociados = new LinkedList<>();
+    protected List<Propietario> listaPropietariosAsociados = new ArrayList<>();
     protected EmpresaTransporte ownByEmpresaTransporte;
     protected String numeroChasis;
 
@@ -44,7 +46,7 @@ public abstract class VehiculoBuilder<B extends VehiculoBuilder<B, V>, V extends
         return self();
     }
 
-    public B setListaPropietariosAsociados(Collection<Propietario> listaPropietariosAsociados) {
+    public B setListaPropietariosAsociados(List<Propietario> listaPropietariosAsociados) {
         this.listaPropietariosAsociados = listaPropietariosAsociados;
         return self();
     }

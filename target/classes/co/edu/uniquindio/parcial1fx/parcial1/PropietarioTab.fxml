@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="co.edu.uniquindio.parcial1fx.parcial1.viewController.PropietarioViewController"
-            prefHeight="537.0" prefWidth="602.0">
+
+<AnchorPane prefHeight="537.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.parcial1fx.parcial1.viewController.PropietarioViewController">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
         <children>
             <SplitPane dividerPositions="0.4970414201183432" orientation="VERTICAL" prefHeight="509.0" prefWidth="602.0">
@@ -35,19 +35,19 @@
                             <Button fx:id="btnAgregarPropietario" layoutX="241.0" layoutY="215.0" mnemonicParsing="false" onAction="#onAgregarPropietario" text="Agregar Propietario" />
                             <Label layoutX="29.0" layoutY="149.0" text="Edad:" />
                             <TextField fx:id="txtEdadPropietario" layoutX="85.0" layoutY="145.0" prefHeight="25.0" prefWidth="166.0" promptText="Ingrese la edad" />
-                            <Button fx:id="btnCrearPropietario" layoutX="45.0" layoutY="215.0" mnemonicParsing="false" onAction="#onCrearPropietario" text="Crear Propietario" />
-                            <Button fx:id="btnEditarPropietario" layoutX="435.0" layoutY="215.0" mnemonicParsing="false" onAction="#onEditarPropietario" text="Editar Propietario" />
+                            <Button fx:id="btnCrearPropietario" layoutX="49.0" layoutY="215.0" mnemonicParsing="false" onAction="#onCrearPropietario" text="Limpiar Formulario" />
+                            <Button fx:id="btnEditarPropietario" layoutX="427.0" layoutY="215.0" mnemonicParsing="false" onAction="#onEditarPropietario" text="Actualizar Propietario" />
                         </children>
                     </AnchorPane>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="540.0">
                         <children>
-                            <TableView layoutX="-1.0" prefHeight="200.0" prefWidth="602.0">
+                            <TableView fx:id="tablePropietario" layoutX="-1.0" prefHeight="200.0" prefWidth="602.0">
                                 <columns>
-                                    <TableColumn prefWidth="150.0" text="Nombre" />
-                                    <TableColumn prefWidth="100.0" text="Cedula" />
-                                    <TableColumn prefWidth="180.0" text="Email" />
-                                    <TableColumn prefWidth="100.0" text="Celular" />
-                                    <TableColumn prefWidth="75.0" text="Edad" />
+                                    <TableColumn fx:id="tcNombrePropietario" prefWidth="150.0" text="Nombre" />
+                                    <TableColumn fx:id="tcCedulaPropietario" prefWidth="100.0" text="Cedula" />
+                                    <TableColumn fx:id="tcEmailPropietario" prefWidth="180.0" text="Email" />
+                                    <TableColumn fx:id="tcCelularPropietario" prefWidth="100.0" text="Celular" />
+                                    <TableColumn fx:id="tcEdadPropietario" prefWidth="75.0" text="Edad" />
                                 </columns>
                             </TableView>
                             <Button fx:id="btnEliminarPropietario" layoutX="241.0" layoutY="212.0" mnemonicParsing="false" onAction="#onEliminarPropietario" text="Eliminar Propietario" />

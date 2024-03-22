@@ -5,8 +5,10 @@ import co.edu.uniquindio.parcial1fx.parcial1.model.Propietario;
 import co.edu.uniquindio.parcial1fx.parcial1.model.Vehiculo;
 import co.edu.uniquindio.parcial1fx.parcial1.services.IBuilder;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 public class PropietarioBuilder implements IBuilder {
     private String nombre;
@@ -14,7 +16,7 @@ public class PropietarioBuilder implements IBuilder {
     private String email;
     private String celular;
     private Vehiculo vehiculoPrincipal;
-    private Collection<Vehiculo> listaVehiculosAsociados = new LinkedList<>();
+    private List<Vehiculo> listaVehiculosAsociados = new ArrayList<>();
     private int edad;
     private EmpresaTransporte ownByEmpresaTransporte;
 
@@ -51,7 +53,7 @@ public class PropietarioBuilder implements IBuilder {
     }
 
     public PropietarioBuilder setListaVehiculosAsociados(
-            Collection<Vehiculo> listaVehiculosAsociados) {
+            List<Vehiculo> listaVehiculosAsociados) {
         this.listaVehiculosAsociados.addAll(listaVehiculosAsociados);
         return this;
     }

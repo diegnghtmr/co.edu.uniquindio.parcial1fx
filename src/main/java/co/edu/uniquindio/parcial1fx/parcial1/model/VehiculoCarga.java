@@ -1,6 +1,7 @@
 package co.edu.uniquindio.parcial1fx.parcial1.model;
 
 import java.util.Collection;
+import java.util.List;
 
 public class VehiculoCarga extends Vehiculo {
     private double capacidadCarga;
@@ -9,7 +10,7 @@ public class VehiculoCarga extends Vehiculo {
     public VehiculoCarga(String placa, String modelo,
                          String marca, String color,
                          Propietario propietarioAsociado,
-                         Collection<Propietario> listaPropietariosAsociados,
+                         List<Propietario> listaPropietariosAsociados,
                          double capacidadCarga, int numeroEjes,
                          EmpresaTransporte ownByEmpresaTransporte,
                          String numeroChasis) {

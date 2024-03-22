@@ -1,8 +1,6 @@
 package co.edu.uniquindio.parcial1fx.parcial1.model;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Propietario {
     private String nombre;
@@ -10,21 +8,21 @@ public class Propietario {
     private String email;
     private String celular;
     private Vehiculo vehiculoPrincipal;
-    private Collection<Vehiculo> listaVehiculosAsociados;
+    private List<Vehiculo> listaVehiculosAsociados;
     private int edad;
     private EmpresaTransporte ownByEmpresaTransporte;
 
     public Propietario(String nombre, String cedula,
                        String email, String celular,
                        Vehiculo vehiculoPrincipal,
-                       Collection<Vehiculo> listaVehiculosAsociados, int edad,
+                       List<Vehiculo> listaVehiculosAsociados, int edad,
                        EmpresaTransporte ownByEmpresaTransporte) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.email = email;
         this.celular = celular;
         this.vehiculoPrincipal = vehiculoPrincipal;
-        this.listaVehiculosAsociados = new LinkedList<>(listaVehiculosAsociados);
+        this.listaVehiculosAsociados = new ArrayList<>(listaVehiculosAsociados);
         this.edad = edad;
         this.ownByEmpresaTransporte = ownByEmpresaTransporte;
     }
@@ -49,8 +47,8 @@ public class Propietario {
         return vehiculoPrincipal;
     }
 
-    public Collection<Vehiculo> getListaVehiculosAsociados() {
-        return Collections.unmodifiableCollection(listaVehiculosAsociados);
+    public List<Vehiculo> getListaVehiculosAsociados() {
+        return listaVehiculosAsociados;
     }
 
     public int getEdad() {

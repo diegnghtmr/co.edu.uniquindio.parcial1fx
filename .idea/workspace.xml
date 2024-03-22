@@ -5,36 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef4adae4-6d62-428c-99cd-e995d16be0a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/InicioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/PropietarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/PropietarioVehiculoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/UsuarioTransporteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/VehiculoCargaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/VehiculoTransporteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/InicioViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/PropietarioVehiculoViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/PropietarioViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/UsuarioTransporteViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/UsuarioViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/VehiculoCargaViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/VehiculoTransporteViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/InicioTab.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/PropietarioTab.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/PropietarioVehiculoTab.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/UsuarioTab.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/UsuarioTransporteTab.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/VehiculoCargaTab.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/VehiculoTransporteTab.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/EmpresaTransporteApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/EmpresaTransporteApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/EmpresaTransporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/EmpresaTransporteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/PropietarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/PropietarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/VehiculoCargaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/VehiculoCargaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/VehiculoTransporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/controller/VehiculoTransporteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/factory/ModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/factory/ModelFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/EmpresaTransporte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/EmpresaTransporte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/EmpresaTransporte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/EmpresaTransporte.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/Propietario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/Propietario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/Vehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/VehiculoCarga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/VehiculoCarga.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/VehiculoTransporte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/VehiculoTransporte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/builder/EmpresaTransporteBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/builder/EmpresaTransporteBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/builder/PropietarioBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/builder/PropietarioBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/builder/VehiculoBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/builder/VehiculoBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/builder/VehiculoTransporteBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/model/builder/VehiculoTransporteBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/PropietarioVehiculoViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/PropietarioVehiculoViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/PropietarioViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/PropietarioViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/UsuarioTransporteViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/UsuarioTransporteViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/UsuarioViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/UsuarioViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/VehiculoCargaViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/VehiculoCargaViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/VehiculoTransporteViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/parcial1fx/parcial1/viewController/VehiculoTransporteViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/PropietarioTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/PropietarioTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/UsuarioTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/UsuarioTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/VehiculoCargaTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/VehiculoCargaTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/VehiculoTransporteTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/parcial1fx/parcial1/VehiculoTransporteTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/edu/uniquindio/parcial1fx/parcial1/PropietarioTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/edu/uniquindio/parcial1fx/parcial1/PropietarioTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/edu/uniquindio/parcial1fx/parcial1/UsuarioTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/edu/uniquindio/parcial1fx/parcial1/UsuarioTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/edu/uniquindio/parcial1fx/parcial1/VehiculoCargaTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/edu/uniquindio/parcial1fx/parcial1/VehiculoCargaTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/edu/uniquindio/parcial1fx/parcial1/VehiculoTransporteTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/edu/uniquindio/parcial1fx/parcial1/VehiculoTransporteTab.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +144,11 @@
       <workItem from="1710824574760" duration="149000" />
       <workItem from="1710824831740" duration="426000" />
       <workItem from="1710907714614" duration="5000000" />
-      <workItem from="1710961567805" duration="7352000" />
+      <workItem from="1710961567805" duration="9901000" />
+      <workItem from="1710993867894" duration="4265000" />
+      <workItem from="1711050483992" duration="6840000" />
+      <workItem from="1711061894912" duration="13042000" />
+      <workItem from="1711087607762" duration="6280000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,7 @@ import co.edu.uniquindio.parcial1fx.parcial1.model.*;
 import co.edu.uniquindio.parcial1fx.parcial1.model.builder.*;
 
 import java.util.Collection;
+import java.util.List;
 
 public class ModelFactory {
     private static ModelFactory modelFactory;
@@ -23,7 +24,6 @@ public class ModelFactory {
     }
 
     private void inicializarDatos() {
-
         Propietario propietario01 = new PropietarioBuilder()
                 .setNombre("Juan")
                 .setCedula("123456789")
@@ -224,9 +224,26 @@ public class ModelFactory {
 
     }
 
+    public boolean crearPropietario(Propietario propietario) {
+        return empresaTransporte.crearPropetario(propietario);
+
+    }
+
+    public boolean eliminarPropietario(Propietario propietarioSeleccionado) {
+        return empresaTransporte.eliminarPropietarioExistente(propietarioSeleccionado);
+    }
+
     public boolean crearUsuario(String nombre, String ID, int edad,
                                 double peso) {
         return empresaTransporte.crearUsuario(nombre, ID, edad, peso);
+    }
+
+    public boolean crearUsuario(Usuario usuario) {
+        return empresaTransporte.crearUsuario(usuario);
+    }
+
+    public boolean eliminarUsuarioExistente(Usuario usuarioSeleccionado) {
+        return empresaTransporte.eliminarUsuarioExistente(usuarioSeleccionado);
     }
 
     public boolean crearVehiculoCarga(String placa, String modelo,
@@ -237,12 +254,28 @@ public class ModelFactory {
                 capacidadCarga, numeroEjes, numeroChasis);
     }
 
+    public boolean crearVehiculoCarga(VehiculoCarga vehiculoCarga) {
+        return empresaTransporte.crearVehiculoCarga(vehiculoCarga);
+    }
+
+    public boolean eliminarVehiculoCargaExistente(VehiculoCarga vehiculoCargaSeleccionado) {
+        return empresaTransporte.eliminarVehiculoCargaExistente(vehiculoCargaSeleccionado);
+    }
+
     public boolean crearVehiculoTransporte(String placa, String modelo,
                                            String marca, String color,
                                            int numeroMaxPasajeros,
                                            String numeroChasis) {
         return empresaTransporte.crearVehiculoTransporte(placa, modelo, marca,
                 color, numeroMaxPasajeros, numeroChasis);
+    }
+
+    public boolean crearVehiculoTransporte(VehiculoTransporte vehiculoTransporte) {
+        return empresaTransporte.crearVehiculoTransporte(vehiculoTransporte);
+    }
+
+    public boolean eliminarVehiculoTransporteExistente(VehiculoTransporte vehiculoTransporteSeleccionado) {
+        return empresaTransporte.eliminarVehiculoTransporteExistente(vehiculoTransporteSeleccionado);
     }
 
     public Vehiculo buscarVehiculo(String placa) {
@@ -279,5 +312,38 @@ public class ModelFactory {
 
     public long obtenerUsuariosSuperioresPeso(double peso) {
         return empresaTransporte.obtenerUsuariosPesoMayor(peso);
+    }
+
+    public List<Propietario> obtenerPropietarios() {
+        return empresaTransporte.getListaPropietarios();
+    }
+
+    public List<Usuario> obtenerUsuarios() {
+        return empresaTransporte.getListaUsuarios();
+    }
+
+    public List<VehiculoCarga> obtenerVehiculosCarga() {
+        return empresaTransporte.getListaVehiculosCarga();
+    }
+
+    public List<VehiculoTransporte> obtenerVehiculosTransporte() {
+        return empresaTransporte.getListaVehiculosTransporte();
+    }
+
+    public boolean editarPropietario(Propietario propietarioSeleccionado, Propietario propietarioEditado) {
+        return empresaTransporte.editarPropietario(propietarioSeleccionado, propietarioEditado);
+    }
+
+    public boolean editarUsuario(Usuario usuarioSeleccionado, Usuario usuarioEditado) {
+        return empresaTransporte.editarUsuario(usuarioSeleccionado, usuarioEditado);
+    }
+
+    public boolean editarVehiculoCarga(VehiculoCarga vehiculoCargaSeleccionado, VehiculoCarga vehiculoCargaEditado) {
+        return empresaTransporte.editarVehiculoCarga(vehiculoCargaSeleccionado, vehiculoCargaEditado);
+    }
+
+    public boolean editarVehiculoTransporte(VehiculoTransporte vehiculoTransporteSeleccionado,
+                                            VehiculoTransporte vehiculoTransporteEditado) {
+        return empresaTransporte.editarVehiculoTransporte(vehiculoTransporteSeleccionado, vehiculoTransporteEditado);
     }
 }

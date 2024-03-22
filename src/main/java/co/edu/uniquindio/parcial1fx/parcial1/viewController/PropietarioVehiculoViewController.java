@@ -15,6 +15,7 @@ public class PropietarioVehiculoViewController {
     @FXML
     private URL location;
 
+    @FXML
     void initialize() {
         propietarioVehiculoController = new PropietarioVehiculoController();
     }

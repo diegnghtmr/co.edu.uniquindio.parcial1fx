@@ -3,15 +3,17 @@ package co.edu.uniquindio.parcial1fx.parcial1.model.builder;
 import co.edu.uniquindio.parcial1fx.parcial1.model.*;
 import co.edu.uniquindio.parcial1fx.parcial1.services.IBuilder;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 public class EmpresaTransporteBuilder implements IBuilder {
     private String nombre;
-    private Collection<Propietario> listaPropietarios = new LinkedList<>();
-    private Collection<VehiculoCarga> listaVehiculosCarga = new LinkedList<>();
-    private Collection<VehiculoTransporte> listaVehiculosTransporte = new LinkedList<>();
-    private Collection<Usuario> listaUsuarios = new LinkedList<>();
+    private List<Propietario> listaPropietarios = new ArrayList<>();
+    private List<VehiculoCarga> listaVehiculosCarga = new ArrayList<>();
+    private List<VehiculoTransporte> listaVehiculosTransporte = new ArrayList<>();
+    private List<Usuario> listaUsuarios = new ArrayList<>();
 
     public EmpresaTransporteBuilder setNombre(String nombre) {
         this.nombre = nombre;
@@ -24,7 +26,7 @@ public class EmpresaTransporteBuilder implements IBuilder {
     }
 
     public EmpresaTransporteBuilder setListaPropietarios
-            (Collection<Propietario> listaPropietarios) {
+            (List<Propietario> listaPropietarios) {
         this.listaPropietarios.addAll(listaPropietarios);
         return this;
     }
@@ -36,7 +38,7 @@ public class EmpresaTransporteBuilder implements IBuilder {
     }
 
     public EmpresaTransporteBuilder setListaVehiculosCarga
-            (Collection<VehiculoCarga> listaVehiculosCarga) {
+            (List<VehiculoCarga> listaVehiculosCarga) {
         this.listaVehiculosCarga.addAll(listaVehiculosCarga);
         return this;
     }
@@ -48,7 +50,7 @@ public class EmpresaTransporteBuilder implements IBuilder {
     }
 
     public EmpresaTransporteBuilder setListaVehiculosTransporte
-            (Collection<VehiculoTransporte> listaVehiculosTransporte) {
+            (List<VehiculoTransporte> listaVehiculosTransporte) {
         this.listaVehiculosTransporte.addAll(listaVehiculosTransporte);
         return this;
     }
@@ -60,7 +62,7 @@ public class EmpresaTransporteBuilder implements IBuilder {
     }
 
     public EmpresaTransporteBuilder setListaUsuarios
-            (Collection<Usuario> listaUsuarios) {
+            (List<Usuario> listaUsuarios) {
         this.listaUsuarios.addAll(listaUsuarios);
         return this;
     }

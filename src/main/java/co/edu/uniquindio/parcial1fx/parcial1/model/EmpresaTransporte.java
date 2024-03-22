@@ -5,48 +5,46 @@ import co.edu.uniquindio.parcial1fx.parcial1.model.builder.UsuarioBuilder;
 import co.edu.uniquindio.parcial1fx.parcial1.model.builder.VehiculoCargaBuilder;
 import co.edu.uniquindio.parcial1fx.parcial1.model.builder.VehiculoTransporteBuilder;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class EmpresaTransporte {
     private String nombre;
-    private Collection<Propietario> listaPropietarios;
-    private Collection<VehiculoCarga> listaVehiculosCarga;
-    private Collection<VehiculoTransporte> listaVehiculosTransporte;
-    private Collection<Usuario> listaUsuarios;
+    private List<Propietario> listaPropietarios;
+    private List<VehiculoCarga> listaVehiculosCarga;
+    private List<VehiculoTransporte> listaVehiculosTransporte;
+    private List<Usuario> listaUsuarios;
 
     public EmpresaTransporte(String nombre,
-                             Collection<Propietario> listaPropietarios,
-                             Collection<VehiculoCarga> listaVehiculosCarga,
-                             Collection<VehiculoTransporte> listaVehiculosTransporte,
-                             Collection<Usuario> listaUsuarios) {
+                             List<Propietario> listaPropietarios,
+                             List<VehiculoCarga> listaVehiculosCarga,
+                             List<VehiculoTransporte> listaVehiculosTransporte,
+                             List<Usuario> listaUsuarios) {
         this.nombre = nombre;
-        this.listaPropietarios = new LinkedList<>(listaPropietarios);
-        this.listaVehiculosCarga = new LinkedList<>(listaVehiculosCarga);
-        this.listaVehiculosTransporte = new LinkedList<>(listaVehiculosTransporte);
-        this.listaUsuarios = new LinkedList<>(listaUsuarios);
+        this.listaPropietarios = new ArrayList<>(listaPropietarios);
+        this.listaVehiculosCarga = new ArrayList<>(listaVehiculosCarga);
+        this.listaVehiculosTransporte = new ArrayList<>(listaVehiculosTransporte);
+        this.listaUsuarios = new ArrayList<>(listaUsuarios);
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public Collection<Propietario> getListaPropietarios() {
-        return Collections.unmodifiableCollection(listaPropietarios);
+    public List<Propietario> getListaPropietarios() {
+        return listaPropietarios;
     }
 
-    public Collection<VehiculoCarga> getListaVehiculosCarga() {
-        return Collections.unmodifiableCollection(listaVehiculosCarga);
+    public List<VehiculoCarga> getListaVehiculosCarga() {
+        return listaVehiculosCarga;
     }
 
-    public Collection<VehiculoTransporte> getListaVehiculosTransporte() {
-        return Collections.unmodifiableCollection(listaVehiculosTransporte);
+    public List<VehiculoTransporte> getListaVehiculosTransporte() {
+        return listaVehiculosTransporte;
     }
 
-    public Collection<Usuario> getListaUsuarios() {
-        return Collections.unmodifiableCollection(listaUsuarios);
+    public List<Usuario> getListaUsuarios() {
+        return listaUsuarios;
     }
 
     public void agregarPropietario(Propietario propietario) {
@@ -115,6 +113,29 @@ public class EmpresaTransporte {
         }
     }
 
+    public boolean crearPropetario(Propietario nuevoPropietario) {
+        Propietario propietarioEncontrado = obtenerPropietario(nuevoPropietario.getCedula());
+
+        if (propietarioEncontrado == null) {
+            agregarPropietario(nuevoPropietario);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean eliminarPropietarioExistente(Propietario propietarioSeleccionado) {
+        Propietario propietarioEncontrado = obtenerPropietario(propietarioSeleccionado.getCedula());
+
+        if (propietarioEncontrado != null) {
+            eliminarPropietario(propietarioSeleccionado);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public Usuario obtenerUsuario(String ID) {
         return getListaUsuarios().stream()
                 .filter(propietario -> propietario.getID()
@@ -144,6 +165,29 @@ public class EmpresaTransporte {
             return true;
         }
         else {
+            return false;
+        }
+    }
+
+    public boolean crearUsuario(Usuario nuevoUsuario) {
+        Usuario usuarioEncontrado = obtenerUsuario(nuevoUsuario.getID());
+
+        if (usuarioEncontrado == null) {
+            agregarUsuario(nuevoUsuario);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean eliminarUsuarioExistente(Usuario usuarioSeleccionado) {
+        Usuario usuarioEncontrado = obtenerUsuario(usuarioSeleccionado.getID());
+
+        if (usuarioEncontrado != null) {
+            eliminarUsuario(usuarioSeleccionado);
+            return true;
+        } else {
             return false;
         }
     }
@@ -189,6 +233,29 @@ public class EmpresaTransporte {
         }
     }
 
+    public boolean crearVehiculoCarga(VehiculoCarga nuevoVehiculoCarga) {
+        VehiculoCarga vehiculoCargaEncontrado = obtenerVehiculoCarga(nuevoVehiculoCarga.getPlaca());
+
+        if (vehiculoCargaEncontrado == null) {
+            agregarVehiculoCarga(nuevoVehiculoCarga);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean eliminarVehiculoCargaExistente(VehiculoCarga vehiculoCargaSeleccionado) {
+        VehiculoCarga vehiculoCargaEncontrado = obtenerVehiculoCarga(vehiculoCargaSeleccionado.getPlaca());
+
+        if (vehiculoCargaEncontrado != null) {
+            eliminarVehiculoCarga(vehiculoCargaSeleccionado);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public VehiculoTransporte obtenerVehiculoTransporte(String placa) {
         return getListaVehiculosTransporte().stream()
                 .filter(vehiculoTransporte -> vehiculoTransporte.getPlaca()
@@ -224,6 +291,28 @@ public class EmpresaTransporte {
             return true;
         }
         else {
+            return false;
+        }
+    }
+
+    public boolean crearVehiculoTransporte(VehiculoTransporte nuevoVehiculoTransporte) {
+        VehiculoTransporte vehiculoTransporteEncontrado = obtenerVehiculoTransporte(nuevoVehiculoTransporte.getPlaca());
+        if (vehiculoTransporteEncontrado == null) {
+            agregarVehiculoTransporte(nuevoVehiculoTransporte);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean eliminarVehiculoTransporteExistente(VehiculoTransporte vehiculoTransporteSeleccionado) {
+        VehiculoTransporte vehiculoTransporteEncontrado = obtenerVehiculoTransporte(vehiculoTransporteSeleccionado.getPlaca());
+
+        if (vehiculoTransporteEncontrado != null) {
+            eliminarVehiculoTransporte(vehiculoTransporteSeleccionado);
+            return true;
+        } else {
             return false;
         }
     }
@@ -279,5 +368,41 @@ public class EmpresaTransporte {
                 .mapToInt(Usuario::getEdad)
                 .filter(edad -> edad >= 40)
                 .count();
+    }
+
+    public boolean editarPropietario(Propietario propietarioSeleccionado, Propietario propietarioEditado) {
+        int indice = listaPropietarios.indexOf(propietarioSeleccionado);
+        if (indice != -1) {
+            listaPropietarios.set(indice, propietarioEditado);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean editarUsuario(Usuario usuarioSeleccionado, Usuario usuarioEditado) {
+        int indice = listaUsuarios.indexOf(usuarioSeleccionado);
+        if (indice != -1) {
+            listaUsuarios.set(indice, usuarioEditado);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean editarVehiculoCarga(VehiculoCarga vehiculoCargaSeleccionado, VehiculoCarga vehiculoCargaEditado) {
+        int indice = listaVehiculosCarga.indexOf(vehiculoCargaSeleccionado);
+        if (indice != -1) {
+            listaVehiculosCarga.set(indice, vehiculoCargaEditado);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean editarVehiculoTransporte(VehiculoTransporte vehiculoTransporteSeleccionado, VehiculoTransporte vehiculoTransporteEditado) {
+        int indice = listaVehiculosTransporte.indexOf(vehiculoTransporteSeleccionado);
+        if (indice != -1) {
+            listaVehiculosTransporte.set(indice, vehiculoTransporteEditado);
+            return true;
+        }
+        return false;
     }
 }

@@ -1,8 +1,6 @@
 package co.edu.uniquindio.parcial1fx.parcial1.model;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.*;
 
 public abstract class Vehiculo {
     private String placa;
@@ -10,21 +8,21 @@ public abstract class Vehiculo {
     private String marca;
     private String color;
     private Propietario propietarioAsociado;
-    private Collection<Propietario> listaPropietariosAsociados;
+    private List<Propietario> listaPropietariosAsociados;
     private EmpresaTransporte ownByEmpresaTransporte;
     private String numeroChasis;
 
     public Vehiculo(String placa, String modelo,
                     String marca, String color,
                     Propietario propietarioAsociado,
-                    Collection<Propietario> listaPropietariosAsociados,
+                    List<Propietario> listaPropietariosAsociados,
                     EmpresaTransporte ownByEmpresaTransporte, String numeroChasis) {
         this.placa = placa;
         this.modelo = modelo;
         this.marca = marca;
         this.color = color;
         this.propietarioAsociado = propietarioAsociado;
-        this.listaPropietariosAsociados = new LinkedList<>(listaPropietariosAsociados);
+        this.listaPropietariosAsociados = new ArrayList<>(listaPropietariosAsociados);
         this.ownByEmpresaTransporte = ownByEmpresaTransporte;
         this.numeroChasis = numeroChasis;
     }
@@ -45,12 +43,16 @@ public abstract class Vehiculo {
         return color;
     }
 
+    public String getNumeroChassis() {
+        return numeroChasis;
+    }
+
     public Propietario getPropietarioAsociado() {
         return propietarioAsociado;
     }
 
-    public Collection<Propietario> getListaPropietariosAsociados() {
-        return Collections.unmodifiableCollection(listaPropietariosAsociados);
+    public List<Propietario> getListaPropietariosAsociados() {
+        return listaPropietariosAsociados;
     }
 
     public EmpresaTransporte getOwnByEmpresaTransporte() {

@@ -15,6 +15,7 @@ public class UsuarioTransporteViewController {
     @FXML
     private URL location;
 
+    @FXML
     void initialize() {
         usuarioController = new UsuarioController();
     }

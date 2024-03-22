@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="co.edu.uniquindio.parcial1fx.parcial1.viewController.UsuarioViewController"
-            prefHeight="537.0" prefWidth="602.0">
+
+<AnchorPane prefHeight="537.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.parcial1fx.parcial1.viewController.UsuarioViewController">
 
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
         <children>
@@ -34,18 +34,18 @@
                             <Button fx:id="btnAgregarUsuario" layoutX="249.0" layoutY="215.0" mnemonicParsing="false" onAction="#onAgregarUsuario" text="Agregar Usuario" />
                             <Label layoutX="330.0" layoutY="125.0" text="Peso:" />
                             <TextField fx:id="txtPesoUsuario" layoutX="378.0" layoutY="121.0" prefHeight="25.0" prefWidth="167.0" promptText="Ingrese el peso" />
-                            <Button fx:id="btnCrearUsuario" layoutX="53.0" layoutY="215.0" mnemonicParsing="false" onAction="#onCrearUsuario" text="Crear Usuario" />
-                            <Button fx:id="btnEditarUsuario" layoutX="453.0" layoutY="215.0" mnemonicParsing="false" onAction="#onEditarUsuario" text="Editar Usuario" />
+                            <Button fx:id="btnCrearUsuario" layoutX="53.0" layoutY="215.0" mnemonicParsing="false" onAction="#onCrearUsuario" text="Limpiar Formulario" />
+                            <Button fx:id="btnEditarUsuario" layoutX="433.0" layoutY="215.0" mnemonicParsing="false" onAction="#onEditarUsuario" text="Actualizar Usuario" />
                         </children>
                     </AnchorPane>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="73.0" prefWidth="600.0">
                         <children>
-                            <TableView prefHeight="200.0" prefWidth="602.0">
+                            <TableView fx:id="tableUsuario" prefHeight="200.0" prefWidth="602.0">
                                 <columns>
-                                    <TableColumn prefWidth="75.0" text="Nombre" />
-                                    <TableColumn prefWidth="75.0" text="ID" />
-                                    <TableColumn prefWidth="75.0" text="Edad" />
-                                    <TableColumn prefWidth="75.0" text="Peso" />
+                                    <TableColumn fx:id="tcNombreUsuario" prefWidth="75.0" text="Nombre" />
+                                    <TableColumn fx:id="tcIDUsuario" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="tcEdadUsuario" prefWidth="75.0" text="Edad" />
+                                    <TableColumn fx:id="tcPesoUsuario" prefWidth="75.0" text="Peso" />
                                 </columns>
                             </TableView>
                             <Button fx:id="btnEliminarUsuario" layoutX="250.0" layoutY="212.0" mnemonicParsing="false" onAction="#onEliminarUsuario" text="Eliminar Usuario" />
